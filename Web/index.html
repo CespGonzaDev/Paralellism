@@ -9,7 +9,12 @@
 <body>
   <!-- Header con controles -->
   <header class="header">
-    <h1 class="header-title">🎮 Game Deals</h1>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <h1 class="header-title">🎮 Game Deals 🕹️</h1>
+      <button id="themeToggle" class="theme-toggle" title="Cambiar tema">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
     <div class="header-controls">
       <input 
         type="search" 
@@ -23,9 +28,39 @@
         <option value="priceDesc">Precio: Mayor a Menor</option>
         <option value="ratingDesc">Mejor Calificación</option>
         <option value="discountDesc">Mayor Descuento</option>
+        <option value="mostReviewed">Más Reseñados</option>
       </select>
     </div>
   </header>
+
+  <!-- Filtros adicionales -->
+  <aside class="filters-sidebar">
+    <h3>Filtros</h3>
+    
+    <div class="filter-group">
+      <h4>Precio 💲</h4>
+      <label>
+        <input type="checkbox" id="filterFree" class="filter-checkbox">
+         Juegos Gratis
+      </label>
+    </div>
+
+    <div class="filter-group">
+      <h4>Duración ⏱</h4>
+      <label>
+        <input type="checkbox" id="filterUnder2h" class="filter-checkbox">
+         Menos de 2 horas
+      </label>
+      <label>
+        <input type="checkbox" id="filterUnder5h" class="filter-checkbox">
+        Menos de 5 horas
+      </label>
+      <label>
+        <input type="checkbox" id="filterUnder10h" class="filter-checkbox">
+         Menos de 10 horas
+      </label>
+    </div>
+  </aside>
 
   <!-- Contenedor principal -->
   <main class="main-container">
